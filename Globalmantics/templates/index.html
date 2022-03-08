@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+FakeCRM -- Welcome
+{% endblock %}
+
+{% block content %}
+    <article>
+        <header>
+            <h1>Welcome</h1>
+            <p> This is a fake CRM app developed as part of a Pluralsight class.</p>
+        </header>
+        <section>
+            <h2>Customer Balances</h2>
+            <ul>
+            {% for cust in cust_db %}
+                <li>{{cust.name}} owes ${{ cust.bal }}</a></li>
+            {% endfor %}
+            </ul>
+        </section>
+        <section>
+            <h2>article section</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+    </article>
+{% endblock %}
+
